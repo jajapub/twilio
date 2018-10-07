@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+
+Route::group([ 'middleware'    => 'api', 'prefix' => 'auth', ], function($router) {
+  Route::get('call/incoming', 'TwilioCaller@initCall');
+  Route::get('call/menu-response')->name('menu-response');
 });
+
+

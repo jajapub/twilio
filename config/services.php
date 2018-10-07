@@ -36,4 +36,11 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'twilio' => [
+        'sid'           => 'AC257dea5b175c863d0077e8fd03b02240',
+        'token'         => '9b9f5fe054bfb49beb170c287642c396',
+        'from'          => '+19189217036',
+        'ssl_verify'    => true, // Development switch to bypass API SSL certificate verfication
+    ]
+
 ];
